@@ -11,3 +11,11 @@ BayerConvert allows to select a folder and a target bayer matrix conversion. All
 Images are now not all in same direction, but that is no problem for most stacking and processing software. You can the process the complete series in one go.
 
 Use at your own risk.
+
+
+Requires: 
+
+python 3.0
+requires following imports:
+- astropy
+- pysimplegui
