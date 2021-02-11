@@ -18,4 +18,4 @@ Requires:
 python 3.0
 requires following imports:
 - astropy
-- pysimplegui ** Does not work with pysimplegui 4.34.0 / Install 4.33.0 ** (under investigation)
+- pysimplegui 
