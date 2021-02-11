@@ -17,7 +17,7 @@
 ## You should have received a copy of the GNU General Public License
 ## along with fits_calibration.  If not, see <http://www.gnu.org/licenses/>.
 
-
+## 2021/02/10 Fix in win.element -> win['key'] - For pysimplegui 4.34.0 (PDB)
 
 from astropy.io import fits
 import glob, sys, os
@@ -50,7 +50,7 @@ menu_def = [['Actions', ['Exit']],
             ['Help', ['What?', 'About...']], ]
 
 
-VERSION = 'A.00.01.004'
+VERSION = 'A.00.01.005'
 A_BOUT = 'Debayer Swap. Version: ' + VERSION + '\n(c) Paul De Backer - 2021'
 
 
@@ -89,7 +89,7 @@ while True:
 
         print ('starting ' + fP + ' to '+ tP)
     
-        window.element('-START-').Update(disabled=True)
+        window['-START-'].Update(disabled=True)
         
         selfolder = values['_OUTPUT_']
         
@@ -111,7 +111,7 @@ while True:
             print("Unexpected error:", sys.exc_info()[0])
 
         print ( 'Processed:', ProcessedFiles, 'files' )
-        window.element('-START-').Update(disabled=False)
+        window['-START-'].Update(disabled=False)
     
     if event == 'About...':
         sg.PopupOK(A_BOUT, title='Fits Calibration ' + VERSION)
